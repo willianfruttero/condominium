@@ -2,101 +2,86 @@
 
 Plataforma inteligente e escalável para gestão de condomínios.
 
----
-
 ## 🚀 Visão Geral
 
 O sistema oferece:
 
-- 👑 Controle total por Admin Global  
-- 🏘️ Gerenciamento de condomínios, unidades, moradores e reservas  
-- 🔐 Acesso segmentado por perfil: Admin, Síndico, Condômino, Gerente  
-- 🧾 Emissão de boletos via Banco Inter, Gerencianet, Pix e outros  
-- 💳 Cobrança mensal automatizada por condomínio  
-- 📆 Reservas de espaços comuns por dia com taxa opcional  
-- 📄 Uploads de documentos por unidade  
-- 🕵️ Logs administrativos e auditoria de ações  
+- 👑 Controle completo por **Administrador Global**
+- 🏙️ Gerenciamento de condomínios, unidades, moradores e reservas
+- 🔐 Acesso segmentado por perfil (Admin, Síndico, Condômino, Gerente)
+- 💸 Emissão de boletos via Banco Inter, Gerencianet, Pix e outros
+- 📆 Reservas por dia com taxa opcional
+- 📄 Uploads de documentos por unidade
+- 🕵️ Logs administrativos e auditoria de ações
 
----
+## 🛠️ Stack Tecnológica
 
-## 💻 Stack Tecnológica
+| Camada     | Tecnologia                              |
+|------------|------------------------------------------|
+| Frontend   | Next.js + TypeScript + Tailwind CSS      |
+| Backend    | Spring Boot (Java)                       |
+| Pagamento  | Banco Inter API + Pix + Alternativas     |
+| Deploy     | Vercel (frontend), Heroku/AWS (backend)  |
 
-| Camada     | Tecnologia                            |
-|------------|----------------------------------------|
-| Frontend   | Next.js + TypeScript + Tailwind CSS    |
-| Backend    | Spring Boot (Java)                     |
-| Pagamento  | Banco Inter API + Pix + Alternativas   |
-| Deploy     | Vercel (frontend), Heroku/AWS (backend)|
+## 👥 Perfis e Acessos
 
----
+| Perfil                | Funções Principais                                                                 |
+|-----------------------|------------------------------------------------------------------------------------|
+| **Administrador Global** | Gerencia condomínios, receita da plataforma, custos operacionais e acessos |
+| Síndico               | Gerencia seu condomínio, moradores, boletos e reservas                            |
+| Condômino             | Acessa boletos, faz reservas e edita seus dados pessoais                          |
+| Gerente               | Atua sob supervisão do administrador global com funções específicas               |
 
-## 👤 Perfis e Acessos
+## 📁 Estrutura de Pastas
 
-| Perfil         | Funções Principais                                         |
-|----------------|------------------------------------------------------------|
-| Admin Global   | Cadastra condomínios, síndicos, gerentes e gerencia cobrança |
-| Gerente        | Atua sob supervisão do Admin, com funções específicas       |
-| Síndico        | Gerencia o condomínio, moradores, boletos e reservas        |
-| Condômino      | Acessa boletos, faz reservas e edita seus dados pessoais    |
+src/ ├── app/ # Páginas principais ├── components/ # Componentes visuais reutilizáveis ├── mocks/ # Dados simulados para frontend ├── services/ # APIs e integrações public/ └── mock-screens/ # Imagens e HTMLs das telas mockadas
 
----
 
-## 📂 Estrutura de Pastas
+## 🖼️ Telas Mockadas Visuais
+
+Localizadas em `public/mock-screens/` ou `src/screens/`:
+
+- `login.html`
+- `dashboard-admin.html`
+- `dashboard-admin-global.html` ✅
+- `cadastro-condominio.html`
+- `boletos-sindico.html`
+- `reservas-condomino-dia.html`
+- `perfil-condomino.html`
+- `gerente-cadastro.html`
+- `gerente-solicitacoes.html`
+- `config-pagamento-condominio.html`
+
+> Todas as telas são mockups em **HTML + CSS puro**, com estilo embutido para testes via Live Server.
+
+## 📊 Tela `dashboard-admin-global.html`
+
+Painel estratégico do **administrador global da plataforma Condominium**:
+
+- Resumo financeiro mensal (receita, custos e lucro líquido)
+- Tabela de condomínios cadastrados com status, plano e último pagamento
+- Custos operacionais categorizados (infraestrutura, equipe, serviços externos)
+- Gráfico mockado de evolução da receita
+
+⚠️ Por segurança, **ações críticas** como habilitar/desabilitar condomínios **não estão presentes** na tela principal — serão gerenciadas em uma tela separada, com confirmação.
+
+## 🧪 Execução Local
+
+Frontend:
 
 ```bash
-src/
-├── app/              # Páginas principais
-├── components/       # Componentes visuais reutilizáveis
-├── mocks/            # Dados simulados para frontend
-├── services/         # APIs e integrações
-├── middleware.ts     # Proteção de rotas privadas
-public/
-└── mock-screens/     # Imagens das telas mockadas
-📸 Telas Mockadas
-Localizadas em public/mock-screens/:
-
-login.png
-
-dashboard-admin.png
-
-cadastro-condominio.png
-
-dashboard-sindico.png
-
-cadastro-apartamentos.png
-
-boletos-sindico.png
-
-boletos-condomino.png
-
-reservas-condomino-dia.png
-
-perfil-condomino.png
-
-gerente-cadastro.png
-
-gerente-solicitacoes.png
-
-config-pagamento-condominio.png
-
-📦 Como Executar Localmente
-Frontend
-bash
 npm install
 npm run dev
 ➡ http://localhost:3000
-Backend
+Backend:
+
 bash
 mvn spring-boot:run
-➡ Configure o application.properties com a API escolhida para boletos/Pix
-📄 Roadmap do Projeto
-Confira o progresso completo das funcionalidades e telas mockadas no arquivo ROADMAP.md
+➡ Configure o application.properties com a API de boletos/Pix
+Live Server (mock HTML):
 
-
----
-
-## 🧾 `ROADMAP.md` — Versão atualizada
-
-> ✅ Repleto de perfis, funcionalidades detalhadas, metas, cronograma e mockups já definidos.
-
-Se quiser revisar antes de colar, posso te mostrar o conteúdo em seguida — ou te entregar direto com tudo pronto para subir. Me confirma e já envio! 😄📂📘
+bash
+➡ Abra os arquivos HTML em `mock-screens/` com extensão .html
+➡ Use o Live Server no VS Code para visualizar no navegador
+📌 ROADMAP
+Confira o progresso completo das funcionalidades e telas mockadas em ROADMAP.md
