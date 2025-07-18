@@ -1,87 +1,47 @@
-# 🏢 Condominium
+# Projeto: Condominium
 
-Plataforma inteligente e escalável para gestão de condomínios.
+## Sobre o projeto
 
-## 🚀 Visão Geral
+Sistema web de gestão condominial com perfis de acesso diferenciados e funcionalidades específicas por usuário.
 
-O sistema oferece:
+## Execução
 
-- 👑 Controle completo por **Administrador Global**
-- 🏙️ Gerenciamento de condomínios, unidades, moradores e reservas
-- 🔐 Acesso segmentado por perfil (Admin, Síndico, Condômino, Gerente)
-- 💸 Emissão de boletos via Banco Inter, Gerencianet, Pix e outros
-- 📆 Reservas por dia com taxa opcional
-- 📄 Uploads de documentos por unidade
-- 🕵️ Logs administrativos e auditoria de ações
-
-## 🛠️ Stack Tecnológica
-
-| Camada     | Tecnologia                              |
-|------------|------------------------------------------|
-| Frontend   | Next.js + TypeScript + Tailwind CSS      |
-| Backend    | Spring Boot (Java)                       |
-| Pagamento  | Banco Inter API + Pix + Alternativas     |
-| Deploy     | Vercel (frontend), Heroku/AWS (backend)  |
-
-## 👥 Perfis e Acessos
-
-| Perfil                | Funções Principais                                                                 |
-|-----------------------|------------------------------------------------------------------------------------|
-| **Administrador Global** | Gerencia condomínios, receita da plataforma, custos operacionais e acessos |
-| Síndico               | Gerencia seu condomínio, moradores, boletos e reservas                            |
-| Condômino             | Acessa boletos, faz reservas e edita seus dados pessoais                          |
-| Gerente               | Atua sob supervisão do administrador global com funções específicas               |
-
-## 📁 Estrutura de Pastas
-
-src/ ├── app/ # Páginas principais ├── components/ # Componentes visuais reutilizáveis ├── mocks/ # Dados simulados para frontend ├── services/ # APIs e integrações public/ └── mock-screens/ # Imagens e HTMLs das telas mockadas
-
-
-## 🖼️ Telas Mockadas Visuais
-
-Localizadas em `public/mock-screens/` ou `src/screens/`:
-
-- `login.html`
-- `dashboard-admin.html`
-- `dashboard-admin-global.html` ✅
-- `cadastro-condominio.html`
-- `boletos-sindico.html`
-- `reservas-condomino-dia.html`
-- `perfil-condomino.html`
-- `gerente-cadastro.html`
-- `gerente-solicitacoes.html`
-- `config-pagamento-condominio.html`
-
-> Todas as telas são mockups em **HTML + CSS puro**, com estilo embutido para testes via Live Server.
-
-## 📊 Tela `dashboard-admin-global.html`
-
-Painel estratégico do **administrador global da plataforma Condominium**:
-
-- Resumo financeiro mensal (receita, custos e lucro líquido)
-- Tabela de condomínios cadastrados com status, plano e último pagamento
-- Custos operacionais categorizados (infraestrutura, equipe, serviços externos)
-- Gráfico mockado de evolução da receita
-
-⚠️ Por segurança, **ações críticas** como habilitar/desabilitar condomínios **não estão presentes** na tela principal — serão gerenciadas em uma tela separada, com confirmação.
-
-## 🧪 Execução Local
-
-Frontend:
-
+Rodar localmente via servidor estático:
 ```bash
-npm install
 npm run dev
-➡ http://localhost:3000
-Backend:
+Estrutura de pastas
+src/ → componentes, páginas, serviços
 
-bash
-mvn spring-boot:run
-➡ Configure o application.properties com a API de boletos/Pix
-Live Server (mock HTML):
+public/mock-screens/ → imagens mockadas e arquivos HTML de referência visual
 
-bash
-➡ Abra os arquivos HTML em `mock-screens/` com extensão .html
-➡ Use o Live Server no VS Code para visualizar no navegador
-📌 ROADMAP
-Confira o progresso completo das funcionalidades e telas mockadas em ROADMAP.md
+Telas mockadas
+As seguintes telas foram criadas como mockups para ajudar no layout e estruturação visual do sistema. Cada imagem é acompanhada de um arquivo .html correspondente, permitindo que o assistente Copilot analise e colabore com base na estrutura visual.
+
+Telas salvas em public/mock-screens/:
+login.png
+
+dashboard-admin.png
+
+cadastro-condominio.png
+
+dashboard-sindico.png
+
+cadastro-apartamentos.png
+
+boletos-sindico.png
+
+boletos-condomino.png
+
+reservas-condomino-dia.png
+
+perfil-condomino.png
+
+gerente-cadastro.png
+
+gerente-solicitacoes.png
+
+config-pagamento-condominio.png
+
+condominios-gerenciador.png
+
+condominios-gerenciador.html ← referência visual da tela
