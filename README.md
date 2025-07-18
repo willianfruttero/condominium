@@ -1,67 +1,102 @@
-# 🏢 **Condominium**  
-> Plataforma inteligente para gestão de condomínios
+# 🏢 Condominium
 
-[![Made with Next.js](https://img.shields.io/badge/Next.js-13+-blue?logo=next.js)](https://nextjs.org)  
-[![Spring Boot](https://img.shields.io/badge/SpringBoot-Java-brightgreen?logo=spring)](https://spring.io/projects/spring-boot)  
-[![Tailwind](https://img.shields.io/badge/TailwindCSS-Styled-blue?logo=tailwindcss)](https://tailwindcss.com)  
-[![MIT License](https://img.shields.io/badge/license-MIT-yellow)](./LICENSE)
+Plataforma inteligente e escalável para gestão de condomínios.
 
 ---
 
 ## 🚀 Visão Geral
 
-O *Condominium* é um sistema completo para administração de condomínios com foco em:
+O sistema oferece:
 
-- 🏘️ Gerenciamento de moradores, visitantes e unidades  
-- 🧾 Emissão de boletos via API do Banco Inter  
-- 🎨 Layout institucional com design moderno e responsivo  
-- 🔐 Painel administrativo com login e controle de acesso
-
----
-
-## 🔧 Stack Tecnológica
-
-| Camada     | Tecnologia                          |
-|------------|--------------------------------------|
-| Frontend   | Next.js, TypeScript, Tailwind CSS    |
-| Backend    | Spring Boot (Java)                   |
-| Boleto     | Banco Inter API + futuras opções     |
-| Deploy     | Vercel (frontend), Heroku/AWS (backend) |
+- 👑 Controle total por Admin Global  
+- 🏘️ Gerenciamento de condomínios, unidades, moradores e reservas  
+- 🔐 Acesso segmentado por perfil: Admin, Síndico, Condômino, Gerente  
+- 🧾 Emissão de boletos via Banco Inter, Gerencianet, Pix e outros  
+- 💳 Cobrança mensal automatizada por condomínio  
+- 📆 Reservas de espaços comuns por dia com taxa opcional  
+- 📄 Uploads de documentos por unidade  
+- 🕵️ Logs administrativos e auditoria de ações  
 
 ---
 
-## 📁 Estrutura de Pastas
+## 💻 Stack Tecnológica
 
-```txt
+| Camada     | Tecnologia                            |
+|------------|----------------------------------------|
+| Frontend   | Next.js + TypeScript + Tailwind CSS    |
+| Backend    | Spring Boot (Java)                     |
+| Pagamento  | Banco Inter API + Pix + Alternativas   |
+| Deploy     | Vercel (frontend), Heroku/AWS (backend)|
+
+---
+
+## 👤 Perfis e Acessos
+
+| Perfil         | Funções Principais                                         |
+|----------------|------------------------------------------------------------|
+| Admin Global   | Cadastra condomínios, síndicos, gerentes e gerencia cobrança |
+| Gerente        | Atua sob supervisão do Admin, com funções específicas       |
+| Síndico        | Gerencia o condomínio, moradores, boletos e reservas        |
+| Condômino      | Acessa boletos, faz reservas e edita seus dados pessoais    |
+
+---
+
+## 📂 Estrutura de Pastas
+
+```bash
 src/
 ├── app/              # Páginas principais
-├── components/       # Componentes visuais
-├── middleware.ts     # Proteção de rotas
-public/images/        # Logotipo e assets SVG
-🧪 Como Executar Localmente
-Pré-requisitos
-Node.js 18+
+├── components/       # Componentes visuais reutilizáveis
+├── mocks/            # Dados simulados para frontend
+├── services/         # APIs e integrações
+├── middleware.ts     # Proteção de rotas privadas
+public/
+└── mock-screens/     # Imagens das telas mockadas
+📸 Telas Mockadas
+Localizadas em public/mock-screens/:
 
-Java 17+
+login.png
 
-Banco PostgreSQL local ou via Docker
+dashboard-admin.png
 
-Rodar frontend:
+cadastro-condominio.png
+
+dashboard-sindico.png
+
+cadastro-apartamentos.png
+
+boletos-sindico.png
+
+boletos-condomino.png
+
+reservas-condomino-dia.png
+
+perfil-condomino.png
+
+gerente-cadastro.png
+
+gerente-solicitacoes.png
+
+config-pagamento-condominio.png
+
+📦 Como Executar Localmente
+Frontend
 bash
 npm install
 npm run dev
-➡ Acesse: http://localhost:3000
-
-Rodar backend:
+➡ http://localhost:3000
+Backend
 bash
 mvn spring-boot:run
-🔑 Configure application.properties com os dados da API do Banco Inter
+➡ Configure o application.properties com a API escolhida para boletos/Pix
+📄 Roadmap do Projeto
+Confira o progresso completo das funcionalidades e telas mockadas no arquivo ROADMAP.md
 
-📌 Roadmap e Progresso
-Veja o planejamento do projeto no ROADMAP.md
 
-🤝 Contribuições
-Contribuições são bem-vindas! Use o Issues para sugestões e melhorias.
+---
 
-👨‍💼 Autor
-Willian Fruttero 🔗 GitHub
+## 🧾 `ROADMAP.md` — Versão atualizada
+
+> ✅ Repleto de perfis, funcionalidades detalhadas, metas, cronograma e mockups já definidos.
+
+Se quiser revisar antes de colar, posso te mostrar o conteúdo em seguida — ou te entregar direto com tudo pronto para subir. Me confirma e já envio! 😄📂📘

@@ -1,53 +1,117 @@
-# 🧾 Roadmap de Desenvolvimento - Condominium
+# 🧾 ROADMAP DE DESENVOLVIMENTO — Condominium
 
-Plataforma inteligente para gestão de condomínios.
+Sistema inteligente e escalável para gestão de condomínios.
 
-## ✅ Status Atual
+---
+
+## ✅ STATUS ATUAL
 
 - Homepage institucional finalizada com layout UX/UI responsivo
-- Logotipo profissional em SVG aplicado e visível
-- Formulário de login funcional com roteamento para `/login`
-- Componentes integrados:
-  - `Footer.tsx` (rodapé institucional)
-  - `LgpdConsentModal.tsx` (consentimento LGPD)
-- Projeto conectado ao GitHub  
-  🔗 Repositório: https://github.com/willianfruttero/condominium  
+- Logotipo profissional em SVG aplicado
+- Tela de login funcional com roteamento para `/login`
+- Componentes integrados (`Footer.tsx`, `LgpdConsentModal.tsx`)
+- Repositório conectado: [GitHub](https://github.com/willianfruttero/condominium)  
   Último commit: "Home com login feito"
 
 ---
 
-## 🧠 Stack do Projeto
+## 🧠 STACK DO PROJETO
 
 | Camada        | Tecnologia                        |
 |---------------|------------------------------------|
 | Frontend      | Next.js + TypeScript + Tailwind    |
-| Backend       | **Spring Boot (Java)**             |
-| Boleto        | Integração com **Banco Inter API** |
-| Alternativas  | Gerencianet, Asaas, Pagar.me       |
-| Deploy        | Vercel (Frontend) + Heroku/AWS (Backend) |
+| Backend       | Spring Boot (Java)                 |
+| Pagamento     | Banco Inter API + Gerencianet + Pix |
+| Deploy        | Vercel (Frontend) + Heroku/AWS     |
 
 ---
 
-## 📅 Próximas Etapas (Dia seguinte de trabalho)
+## 👤 PERFIS DO SISTEMA
 
-| Horário | Tarefa | Objetivo |
-|--------|--------|----------|
-| 09:00  | Revisar estrutura de pastas (`src/app`, `components`, etc.) | Garantir organização para escalabilidade |
-| 10:30  | Criar autenticação funcional | Validação de usuários e sessão segura |
-| 13:00  | Desenvolver dashboard do síndico | Cards de gestão e acesso protegido |
-| 15:00  | Criar CRUD de condomínios/unidades | Começar parte funcional da gestão |
-| 16:30  | Montar design-system de componentes | Padronização visual e reutilização |
-| 18:00  | Configurar deploy com Vercel | Preparar ambiente de produção |
+| Perfil         | Funções principais                                      |
+|----------------|---------------------------------------------------------|
+| Admin Global   | Cadastra condomínios, gerencia cobrança e acessos       |
+| Gerente        | Auxilia o Admin com permissões restritas (exclusão sob aprovação) |
+| Síndico        | Gerencia moradores, boletos, unidades, reservas         |
+| Condômino      | Visualiza boletos, faz reservas, edita seu perfil       |
 
 ---
 
-## 🎯 Metas Futuras
+## 🔧 FUNCIONALIDADES POR PERFIL
 
-- 🌙 Modo escuro opcional
+### 👑 ADMIN GLOBAL
+- Dashboard com cards e condomínios listados
+- Cadastro de novos condomínios com plano comercial
+- Atribuição de síndicos
+- Cadastro e gestão de gerentes
+- Aprovação de solicitações de exclusão (condomínios/síndicos)
+- Geração de cobranças mensais por condomínio
+- Tela de faturas e integração com múltiplos provedores de pagamento
+- Definição de plano de cobrança: valor fixo, por unidade, ou por recurso
+
+### 🧑‍💼 GERENTE
+- Visualização e edição parcial de condomínios e síndicos
+- Cadastro de condomínios (com limitações)
+- Solicitação de exclusão (apenas com aprovação do Admin)
+- Acesso restrito às funcionalidades que o Admin delegar
+
+### 🏢 SÍNDICO
+- Dashboard com indicadores do condomínio
+- Cadastro de apartamentos manual ou via `.zip`
+- Gerenciamento de moradores
+- Emissão de boletos por unidade
+- Definição de taxa condominial
+- Configuração de reserva de espaços por dia (com taxa opcional)
+- Visualização de reservas no calendário
+- Edição das regras do condomínio
+
+### 👤 CONDÔMINO
+- Acesso à unidade vinculada
+- Visualização e download de boletos
+  - Filtros por mês e status (aberto, atrasado, pago)
+- Reserva de espaços por **dia**
+  - Sistema bloqueia automaticamente o dia reservado
+  - Taxa informada no momento da reserva (se aplicável)
+- Edição dos próprios dados no perfil
+
+---
+
+## 🖼️ TELAS MOCKADAS EM `public/mock-screens/`
+
+- `login.png`
+- `dashboard-admin.png`
+- `cadastro-condominio.png`
+- `dashboard-sindico.png`
+- `cadastro-apartamentos.png`
+- `boletos-sindico.png`
+- `boletos-condomino.png`
+- `reservas-condomino-dia.png`
+- `perfil-condomino.png`
+- `gerente-cadastro.png`
+- `gerente-solicitacoes.png`
+- `config-pagamento-condominio.png`
+- *(Outras em andamento…)*
+
+---
+
+## 📅 CRONOGRAMA DE DESENVOLVIMENTO PESSOAL
+
+| Horário | Tarefa                          | Objetivo                                 |
+|--------|----------------------------------|------------------------------------------|
+| 09:00  | Revisar estrutura de pastas      | Organização para escalabilidade          |
+| 10:30  | Implementar autenticação         | Validação de usuários                    |
+| 13:00  | Criar dashboard do síndico       | Cards com gestão visual e funcional      |
+| 15:00  | CRUD de condomínios/unidades     | Controle completo pelo síndico           |
+| 16:30  | Design system de componentes     | Reutilização visual e consistência       |
+| 18:00  | Configurar deploy com Vercel     | Preparar ambiente de produção            |
+
+---
+
+## 🎯 METAS FUTURAS
+
+- 🌙 Modo escuro para todo o sistema
 - 🔔 Notificações internas e painel de mensagens
-- 🔐 Controle de acesso por perfil (síndico, morador, admin)
-- 📄 Uploads/documentos para moradores
-- 🧾 Geração de boletos via Banco Inter (Spring Boot)
-- 🔌 Alternativas de boleto via Gerencianet, Asaas, etc.
-- 📊 Relatórios e gráficos de gestão
-- 🕵️ Logs e auditoria de ações administrativas
+- 📄 Upload de documentos para moradores/unidades
+- 🔌 Integrações com múltiplos gateways de pagamento (Pix, Asaas, Pagar.me)
+- 🔍 Logs e auditoria das ações administrativas
+- 📊 Relatórios e gráficos gerenciais por condomínio
