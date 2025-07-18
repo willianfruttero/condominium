@@ -1,65 +1,76 @@
 # 🗺️ ROADMAP.md
 
-## 👥 Perfis e funcionalidades
+## 🎯 Objetivo
 
-Este documento lista todas as funcionalidades previstas para cada tipo de usuário no sistema condominial, com link para os mockups HTML gerados.
-
----
-
-### 👤 Condômino
-
-- [x] `login.html` — acesso ao sistema
-- [x] `perfil-condomino.html` — dados pessoais e apartamento
-- [x] `boletos-condomino.html` — painel de boletos pessoais
-- [x] `reservas-condomino-dia.html` — reservas de áreas comuns
-- [x] `eventos-condominio.html` — lista de eventos no condomínio
-- [x] `ocorrencias.html` — envio e acompanhamento de ocorrências
-- [x] `meus-boletos.html` — histórico de pagamentos
+Este roadmap acompanha o progresso visual e funcional do sistema de gestão condominial, segmentado por perfil de acesso. Cada funcionalidade é validada por meio de mockups HTML antes de ser implementada na aplicação final.
 
 ---
 
-### 🧑‍💼 Síndico
+## 👤 Condômino
 
-- [x] `dashboard-sindico.html` — visão geral do condomínio
-- [x] `config-pagamento-condominio.html` — configurações de cobrança
-- [x] `relatorios-financeiros.html` — geração de relatórios
-- [x] `ocorrencias.html` — gestão de ocorrências recebidas
-- [x] `eventos-condominio.html` — criação e edição de eventos
-- [x] `boletos-sindico.html` — controle de boletos do condomínio
-
----
-
-### 👨‍🔧 Gerente
-
-- [x] `gerente-cadastro.html` — criação de usuários internos
-- [x] `gerente-solicitacoes.html` — solicitações enviadas pelos condôminos
-- [x] `relatorios-financeiros.html` — visão consolidada dos pagamentos
-- [x] `prestadores-servico.html` — controle básico de prestadores
-- [x] `solicitacoes-gerente.html` — tela avançada de encaminhamento
+| Funcionalidade                | Status    | Tela HTML                          |
+|------------------------------|-----------|------------------------------------|
+| Login                        | ✅ Feito   | `login.html`                       |
+| Visualizar perfil pessoal    | ✅ Feito   | `perfil-condomino.html`            |
+| Acesso aos boletos pessoais  | ✅ Feito   | `boletos-condomino.html`           |
+| Reservas de espaços por dia  | ✅ Feito   | `reservas-condomino-dia.html`      |
+| Acompanhamento de eventos    | ✅ Feito   | `eventos-condominio.html`          |
+| Registro de ocorrências      | ✅ Feito   | `ocorrencias.html`                 |
+| Visualizar meus boletos      | ✅ Feito   | `meus-boletos.html`                |
+| Solicitação de documentos    | ✅ Feito   | `solicitacoes-documentos.html`     |
 
 ---
 
-### 👨‍💼 Admin Global
+## 🧑‍💼 Síndico
 
-- [x] `dashboard-admin.html` — painel com métricas globais
-- [x] `condominios-gerenciador.html` — lista e controle de condomínios
-- [x] `cadastro-condominio.html` — criação de novos condomínios
-- [x] `cadastro-apartamentos.html` — registro de unidades residenciais
-
----
-
-### 🧰 Gerente / Admin (novas telas)
-
-- [x] `financeiro-condominio.html` — painel de receita, despesa e lançamentos
-- [x] `cadastro-fornecedores.html` — formulário completo para registrar prestadores
-- [x] `fornecedores-visualizacao.html` — lista com filtros, status e ações
+| Funcionalidade                    | Status    | Tela HTML                          |
+|----------------------------------|-----------|------------------------------------|
+| Dashboard principal              | ✅ Feito   | `dashboard-sindico.html`           |
+| Configuração de pagamento        | ✅ Feito   | `config-pagamento-condominio.html` |
+| Relatórios financeiros           | ✅ Feito   | `relatorios-financeiros.html`      |
+| Gestão de boletos do condomínio  | ✅ Feito   | `boletos-sindico.html`             |
+| Gestão de ocorrências            | ✅ Feito   | `ocorrencias.html`                 |
+| Gerenciar eventos                | ✅ Feito   | `eventos-condominio.html`          |
+| Acesso aos indicadores gerais    | ✅ Feito   | `indicadores-condominio.html`      |
+| Painel de solicitações unificado | ✅ Feito   | `protocolo-solicitacoes.html`      |
 
 ---
 
-## 🔜 Telas futuras sugeridas
+## 📋 Gerente
 
-- `agenda-servicos.html` — calendário de serviços prestados
-- `painel-manutencao.html` — acompanhamento de áreas comuns
-- `avaliacoes-fornecedores.html` — histórico de avaliações e notas
-- `acessos-portaria.html` — registro e controle de acessos
-- `notificacoes-gerais.html` — central de avisos e comunicados
+| Funcionalidade                      | Status    | Tela HTML                          |
+|------------------------------------|-----------|------------------------------------|
+| Cadastro de usuários               | ✅ Feito   | `gerente-cadastro.html`            |
+| Acompanhamento de solicitações     | ✅ Feito   | `gerente-solicitacoes.html`        |
+| Relatórios financeiros avançados   | ✅ Feito   | `relatorios-financeiros.html`      |
+| Gerenciamento de prestadores       | ✅ Feito   | `prestadores-servico.html`         |
+| Solicitações detalhadas            | ✅ Feito   | `solicitacoes-gerente.html`        |
+| Cadastro de fornecedores           | ✅ Feito   | `cadastro-fornecedores.html`       |
+| Visualização de fornecedores       | ✅ Feito   | `fornecedores-visualizacao.html`   |
+| Agenda de serviços                 | ✅ Feito   | `agenda-servicos.html`             |
+| Painel de manutenção               | ✅ Feito   | `painel-manutencao.html`           |
+| Protocolo geral de solicitações    | ✅ Feito   | `protocolo-solicitacoes.html`      |
+| Central de documentos              | ✅ Feito   | `documentos-condominio.html`       |
+
+---
+
+## 🛠️ Admin Global
+
+| Funcionalidade                     | Status    | Tela HTML                          |
+|-----------------------------------|-----------|------------------------------------|
+| Dashboard principal               | ✅ Feito   | `dashboard-admin.html`             |
+| Gerenciador de condomínios        | ✅ Feito   | `condominios-gerenciador.html`     |
+| Cadastro de novo condomínio       | ✅ Feito   | `cadastro-condominio.html`         |
+| Cadastro de apartamentos          | ✅ Feito   | `cadastro-apartamentos.html`       |
+| Visão financeira consolidada      | ✅ Feito   | `financeiro-condominio.html`       |
+
+---
+
+## ✅ Funcionalidades concluídas: 37 mockups
+
+📍 Último checkpoint: `protocolo-solicitacoes.html`  
+🚀 Pronto para avançar para o próximo ciclo visual
+
+---
+
+Se quiser que eu também atualize o `REINICIAR.md`, só me pedir que faço na hora. 🧠📋🚀

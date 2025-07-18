@@ -1,111 +1,77 @@
-# 🏢 Condominium — Painel Web Administrativo
+# 📘 README.md
 
-Sistema web visual para gestão de condomínios. Este projeto foca em reproduzir as interfaces por meio de **mockups HTML estáticos**, como referência visual para posterior desenvolvimento backend e integrações reais.
+## 🔍 Sobre o projeto
+
+Sistema de gestão para condomínios, com interfaces dedicadas para diferentes perfis: condômino, síndico, gerente e administrador global. O foco está na criação de mockups navegáveis em HTML, facilitando a validação visual e funcional de cada tela antes da implementação real.
 
 ---
 
-## 👨‍💻 Como rodar localmente
+## 🧩 Estrutura do projeto
 
-1. Clonar o repositório:
-```bash
-git clone https://github.com/willianfruttero/condominium.git
-Abrir o arquivo desejado na pasta:
+- `public/mock-screens/` → mockups HTML responsivos
+- `README.md` → introdução e visão geral
+- `ROADMAP.md` → funcionalidades por perfil
+- `REINICIAR.md` → ponto de retomada visual
+- `/assets` → imagens complementares (opcional)
 
-public/mock-screens/
-Usar Live Server (VSCode) para visualizar cada tela simulada
+---
 
-🧱 Estrutura de pastas
-📦 condominium
-├── README.md
-├── ROADMAP.md
-├── REINICIAR.md
-└── public
-    └── mock-screens
-        ├── login.html
-        ├── meus-boletos.html
-        ├── prestadores-servico.html
-        ├── solicitacoes-gerente.html
-        ├── cadastro-fornecedores.html
-        ├── fornecedores-visualizacao.html
-        ├── financeiro-condominio.html
-        └── demais mockups...
-🔁 Fluxo visual com Copilot
-O projeto é desenvolvido junto ao Microsoft Copilot, por meio de:
+## 👥 Perfis atendidos
 
-Geração de HTML estilizado para cada tela
+- Condômino
+- Síndico
+- Gerente
+- Admin Global
 
-Teste visual via Live Server
+---
 
-Versionamento de mockups em .html como base visual oficial
+## 🖥️ Telas mockadas
 
-Documentação que define funcionalidades, perfis e telas
+| Tela                             | Arquivo HTML                          |
+|----------------------------------|---------------------------------------|
+| Login                            | `login.html`                          |
+| Perfil do Condômino              | `perfil-condomino.html`               |
+| Boletos pessoais                 | `boletos-condomino.html`              |
+| Reservas por dia                 | `reservas-condomino-dia.html`         |
+| Eventos                          | `eventos-condominio.html`             |
+| Ocorrências                      | `ocorrencias.html`                    |
+| Meus boletos                     | `meus-boletos.html`                   |
+| Dashboard Síndico                | `dashboard-sindico.html`              |
+| Configuração de pagamento        | `config-pagamento-condominio.html`    |
+| Relatórios financeiros           | `relatorios-financeiros.html`         |
+| Boletos do condomínio            | `boletos-sindico.html`                |
+| Cadastro de usuários             | `gerente-cadastro.html`               |
+| Solicitações (condôminos)        | `gerente-solicitacoes.html`           |
+| Prestadores de serviço           | `prestadores-servico.html`            |
+| Solicitações avançadas           | `solicitacoes-gerente.html`           |
+| Dashboard Admin                  | `dashboard-admin.html`                |
+| Gerenciador de condomínios       | `condominios-gerenciador.html`        |
+| Cadastro de condomínio           | `cadastro-condominio.html`            |
+| Cadastro de apartamentos         | `cadastro-apartamentos.html`          |
+| Financeiro do condomínio         | `financeiro-condominio.html`          |
+| Cadastro de fornecedores         | `cadastro-fornecedores.html`          |
+| Visualização de fornecedores     | `fornecedores-visualizacao.html`      |
+| Agenda de serviços               | `agenda-servicos.html`                |
+| Painel de manutenção             | `painel-manutencao.html`              |
+| Indicadores do condomínio        | `indicadores-condominio.html`         |
+| Documentos do condomínio         | `documentos-condominio.html`          |
+| Solicitações de documentos       | `solicitacoes-documentos.html`        |
+| Protocolo de solicitações        | `protocolo-solicitacoes.html`         |
 
-📎 Copilot não visualiza imagens .png, então os .html são usados como referência primária para validação visual.
+---
 
-📋 Documentos internos
-ROADMAP.md → funcionalidades por perfil e telas mockadas
+## 🤝 Colaboração com Copilot
 
-REINICIAR.md → ponto de parada atual e fluxo colaborativo
+As telas são desenvolvidas de forma incremental em parceria com o assistente Microsoft Copilot:
 
-README.md → instruções técnicas e estrutura do projeto
+1. Willian define a próxima tela
+2. Copilot gera o HTML completo e responsivo
+3. O layout é validado visualmente no Live Server local
+4. Após aprovação, é salvo em `public/mock-screens/`
+5. O ciclo se repete até concluir o fluxo previsto
 
-🧩 Telas mockadas concluídas
-👤 Condômino
-login.html
+---
 
-perfil-condomino.html
+## 📎 Repositório oficial
 
-boletos-condomino.html
-
-reservas-condomino-dia.html
-
-eventos-condominio.html
-
-ocorrencias.html
-
-meus-boletos.html
-
-🧑‍💼 Síndico
-dashboard-sindico.html
-
-config-pagamento-condominio.html
-
-relatorios-financeiros.html
-
-boletos-sindico.html
-
-eventos-condominio.html
-
-ocorrencias.html
-
-👨‍🔧 Gerente
-gerente-cadastro.html
-
-gerente-solicitacoes.html
-
-relatorios-financeiros.html
-
-prestadores-servico.html
-
-solicitacoes-gerente.html
-
-👨‍💼 Admin Global
-dashboard-admin.html
-
-condominios-gerenciador.html
-
-cadastro-condominio.html
-
-cadastro-apartamentos.html
-
-🧰 Gerente / Admin
-financeiro-condominio.html
-
-cadastro-fornecedores.html
-
-fornecedores-visualizacao.html
-
-📍 Ponto atual
-Última tela mockada: fornecedores-visualizacao.html → lista com filtros, status e ações simuladas para fornecedores cadastrados.
-
-Próxima tela sugerida: agenda-servicos.html ou painel-manutencao.html
+🔗 [github.com/willianfruttero/condominium](https://github.com/willianfruttero/condominium)
