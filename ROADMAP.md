@@ -90,7 +90,6 @@ Sistema inteligente e escalável para gestão de condomínios.
 - `gerente-cadastro.png`
 - `gerente-solicitacoes.png`
 - `config-pagamento-condominio.png`
-- *(Outras em andamento…)*
 
 ---
 
