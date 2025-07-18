@@ -1,36 +1,89 @@
-# 📁 Projeto: Condominium
+# 🔁 REINICIAR.md
 
-## 🧾 Arquivos já salvos no projeto
+## 📍 Ponto exato onde o projeto foi pausado
 
-- `README.md` → com funcionalidades, execução, estrutura de pastas e telas mockadas
-- `ROADMAP.md` → com perfis, funcionalidades por perfil, metas futuras e telas mockadas
+- ✅ Tela `meus-boletos.html` concluída e mockada:
+  - Filtros: mês, ano, status, tipo de cobrança
+  - Coluna “Tipo” adicionada à tabela: Mensalidade, Multa, Extraordinária
+  - Identidade do condômino logado exibida: nome e apartamento
+  - Responsividade aplicada para mobile
+- ✅ HTML salvo em: `public/mock-screens/meus-boletos.html`
+- ✅ Próxima tela sugerida: `prestadores-servico.html` (perfil GERENTE)
 
-## 🖼️ Telas mockadas definidas para gerar e salvar em: `public/mock-screens/`
+---
 
-- Mockups visuais: arquivos `.png`
-- Estruturas de layout complementares: arquivos `.html`
+## 🤝 Dinâmica de desenvolvimento com Copilot
 
-📎 Cada imagem `.png` será acompanhada de um `.html` correspondente que representa a estrutura visual da tela.  
-→ Motivo: o assistente Copilot **não consegue visualizar imagens diretamente no repositório**, portanto usa os arquivos `.html` para entender o layout e colaborar no desenvolvimento.
+Este projeto está sendo desenvolvido em colaboração com o assistente **Microsoft Copilot**, por meio de uma abordagem visual e incremental:
 
-📌 Exemplos salvos:
-- `condominios-gerenciador.png` + `condominios-gerenciador.html`
-- `dashboard-admin.png` + `dashboard-admin.html`
-- `perfil-condomino.png` + `perfil-condomino.html`
+### 🧠 Como interagimos:
 
-## 🧱 Estratégia de desenvolvimento
+- O desenvolvedor (Willian) solicita a próxima tela ou funcionalidade
+- O Copilot gera o HTML completo estilizado com:
+  - Estrutura visual semântica
+  - Layout limpo e moderno
+  - Responsividade aplicada
+  - Comportamentos visuais simulados (via CSS/JS simples)
+- O HTML é testado via **Live Server**
+- Após aprovação, o arquivo é salvo no repositório em `public/mock-screens`
+- O processo se repete com a próxima interface até completar o fluxo por perfil
 
-1. Criar todas as interfaces front-end primeiro (`.html` mockado para cada tela)
-2. Após a definição das telas, iniciar o back-end com **Spring Boot**
-3. Integrar os dados reais e lógica de API a cada tela já visualmente definida
+🛑 Importante:  
+Como Copilot **não visualiza imagens** do repositório `.png`, os arquivos `.html` são usados como **base oficial de referência visual** no projeto.
 
-## ✅ Documentação atualizada
+---
 
-- `README.md` contém explicação sobre o uso dos arquivos `.html` como referência visual
-- `ROADMAP.md` reforça essa prática técnica adotada para todos os mockups
+## 📐 Metodologia técnica e visual adotada
 
-## 📦 Último commit realizado
+### Estrutura dos mockups:
 
-- HTML da tela `condominios-gerenciador.html` salvo e versionado
-- Documentação atualizada
-- Arquivos enviados via `git push`
+- Cada tela tem:
+  - `tela.html` → mock visual navegável
+  - `tela.png` → imagem complementar (opcional)
+- Pastas utilizadas:
+  - Mockups salvos em: `public/mock-screens/`
+  - Documentação: raiz do projeto
+
+### Documentos guia:
+
+- `README.md` → descreve estrutura, execução e avisos técnicos
+- `ROADMAP.md` → lista funcionalidades por perfil e metas visuais
+- `REINICIAR.md` → registra andamento do projeto e ponto de retomada
+
+---
+
+## 📝 Telas mockadas até agora
+
+| Tela                       | Arquivo HTML          |
+|----------------------------|------------------------|
+| login                      | `login.html`           |
+| dashboard-admin            | `dashboard-admin.html` |
+| dashboard-sindico          | `dashboard-sindico.html` |
+| cadastro-condominio        | `cadastro-condominio.html` |
+| cadastro-apartamentos      | `cadastro-apartamentos.html` |
+| boletos-sindico            | `boletos-sindico.html` |
+| boletos-condomino          | `boletos-condomino.html` |
+| reservas-condomino-dia     | `reservas-condomino-dia.html` |
+| perfil-condomino           | `perfil-condomino.html` |
+| gerente-cadastro           | `gerente-cadastro.html` |
+| gerente-solicitacoes       | `gerente-solicitacoes.html` |
+| config-pagamento-condominio| `config-pagamento-condominio.html` |
+| condominios-gerenciador    | `condominios-gerenciador.html` |
+| relatorios-financeiros     | `relatorios-financeiros.html` |
+| ocorrencias                | `ocorrencias.html` |
+| eventos-condominio         | `eventos-condominio.html` |
+| meus-boletos               | `meus-boletos.html` ✅ ← última tela gerada
+
+---
+
+## 🛠️ Para reiniciar o projeto:
+
+1. Abrir este `REINICIAR.md`
+2. Validar a última tela `meus-boletos.html`
+3. Retomar o fluxo pelo perfil gerente com `prestadores-servico.html`  
+   Ou continuar solicitando mockups ao Copilot seguindo o `ROADMAP.md`
+
+---
+
+📎 Repositório oficial:  
+[https://github.com/willianfruttero/condominium](https://github.com/willianfruttero/condominium)
