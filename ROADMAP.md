@@ -1,9 +1,3 @@
-
----
-
-## ✅ ESTE É O `ROADMAP.md`
-
-```md
 # ROADMAP - Projeto Condominium
 
 ## Perfis de usuários
@@ -31,4 +25,15 @@
 
 ## Telas mockadas futuras
 
-Todas as imagens mockadas terão seu respectivo arquivo `.html` como referência visual na pasta `public/mock-screens/`, garantindo que o assistente Copilot possa colaborar com base no layout.
+Todas as telas mockadas serão salvas em `public/mock-screens/` com seus respectivos arquivos `.png` e `.html`.  
+O arquivo `.html` de cada tela serve como **referência visual durante o desenvolvimento** e será utilizado pelo assistente Copilot para compreender o layout, já que ele não tem acesso direto às imagens.
+
+📎 Exemplo de estrutura:
+- `dashboard-admin.png` + `dashboard-admin.html`
+- `perfil-condomino.png` + `perfil-condomino.html`
+- `condominios-gerenciador.png` + `condominios-gerenciador.html`
+
+## Estratégia de desenvolvimento
+
+O projeto será conduzido com foco inicial na implementação das interfaces front-end.  
+Cada tela será estruturada visualmente em `.html` antes do início da lógica funcional. Após finalização das interfaces, será iniciada a construção do back-end usando **Spring Boot**, com APIs integradas aos dados reais do sistema.
