@@ -2,13 +2,12 @@
 
 ## 📍 Ponto exato onde o projeto foi pausado
 
-- ✅ Tela `meus-boletos.html` concluída e mockada:
-  - Filtros: mês, ano, status, tipo de cobrança
-  - Coluna “Tipo” adicionada à tabela: Mensalidade, Multa, Extraordinária
-  - Identidade do condômino logado exibida: nome e apartamento
-  - Responsividade aplicada para mobile
-- ✅ HTML salvo em: `public/mock-screens/meus-boletos.html`
-- ✅ Próxima tela sugerida: `prestadores-servico.html` (perfil GERENTE)
+- ✅ Tela `fornecedores-visualizacao.html` concluída e mockada:
+  - Filtros por nome, tipo de serviço e status
+  - Cards com dados simulados e ações de avaliação, edição e suspensão
+  - Layout responsivo adaptado para mobile
+- ✅ HTML salvo em: `public/mock-screens/fornecedores-visualizacao.html`
+- ✅ Próxima tela sugerida: `agenda-servicos.html` ou `painel-manutencao.html`
 
 ---
 
@@ -16,74 +15,82 @@
 
 Este projeto está sendo desenvolvido em colaboração com o assistente **Microsoft Copilot**, por meio de uma abordagem visual e incremental:
 
-### 🧠 Como interagimos:
+### Como trabalhamos juntos:
 
-- O desenvolvedor (Willian) solicita a próxima tela ou funcionalidade
-- O Copilot gera o HTML completo estilizado com:
-  - Estrutura visual semântica
-  - Layout limpo e moderno
-  - Responsividade aplicada
-  - Comportamentos visuais simulados (via CSS/JS simples)
-- O HTML é testado via **Live Server**
-- Após aprovação, o arquivo é salvo no repositório em `public/mock-screens`
-- O processo se repete com a próxima interface até completar o fluxo por perfil
+- Willian define a próxima tela ou funcionalidade
+- Copilot gera o HTML completo, estilizado e responsivo
+- O layout é testado no Live Server local
+- Após aprovação, é salvo em `public/mock-screens/`
+- O ciclo se repete até completar todas as interfaces planejadas
 
-🛑 Importante:  
-Como Copilot **não visualiza imagens** do repositório `.png`, os arquivos `.html` são usados como **base oficial de referência visual** no projeto.
+📎 Copilot **não visualiza imagens (`.png`)**, então os arquivos `.html` são tratados como **referência visual oficial** para cada tela mockada.
 
 ---
 
 ## 📐 Metodologia técnica e visual adotada
 
 ### Estrutura dos mockups:
+- Cada tela possui:
+  - `.html` → layout navegável
+  - `.png` → imagem complementar (opcional)
+- Local de armazenamento: `public/mock-screens/`
 
-- Cada tela tem:
-  - `tela.html` → mock visual navegável
-  - `tela.png` → imagem complementar (opcional)
-- Pastas utilizadas:
-  - Mockups salvos em: `public/mock-screens/`
-  - Documentação: raiz do projeto
-
-### Documentos guia:
-
-- `README.md` → descreve estrutura, execução e avisos técnicos
-- `ROADMAP.md` → lista funcionalidades por perfil e metas visuais
-- `REINICIAR.md` → registra andamento do projeto e ponto de retomada
+### Documentação utilizada:
+- `README.md` → estrutura técnica e avisos
+- `ROADMAP.md` → funcionalidades por perfil e telas geradas
+- `REINICIAR.md` → ponto de retomada visual do projeto
 
 ---
 
 ## 📝 Telas mockadas até agora
 
-| Tela                       | Arquivo HTML          |
-|----------------------------|------------------------|
-| login                      | `login.html`           |
-| dashboard-admin            | `dashboard-admin.html` |
-| dashboard-sindico          | `dashboard-sindico.html` |
-| cadastro-condominio        | `cadastro-condominio.html` |
-| cadastro-apartamentos      | `cadastro-apartamentos.html` |
-| boletos-sindico            | `boletos-sindico.html` |
-| boletos-condomino          | `boletos-condomino.html` |
-| reservas-condomino-dia     | `reservas-condomino-dia.html` |
-| perfil-condomino           | `perfil-condomino.html` |
-| gerente-cadastro           | `gerente-cadastro.html` |
-| gerente-solicitacoes       | `gerente-solicitacoes.html` |
-| config-pagamento-condominio| `config-pagamento-condominio.html` |
-| condominios-gerenciador    | `condominios-gerenciador.html` |
-| relatorios-financeiros     | `relatorios-financeiros.html` |
-| ocorrencias                | `ocorrencias.html` |
-| eventos-condominio         | `eventos-condominio.html` |
-| meus-boletos               | `meus-boletos.html` ✅ ← última tela gerada
+| Perfil            | Tela                           | Arquivo HTML                       |
+|-------------------|----------------------------------|------------------------------------|
+| Condômino         | Login                          | `login.html`                       |
+| Condômino         | Perfil                         | `perfil-condomino.html`            |
+| Condômino         | Boletos pessoais               | `boletos-condomino.html`           |
+| Condômino         | Reservas por dia               | `reservas-condomino-dia.html`      |
+| Condômino         | Eventos                        | `eventos-condominio.html`          |
+| Condômino         | Ocorrências                    | `ocorrencias.html`                 |
+| Condômino         | Meus boletos                   | `meus-boletos.html`                |
+| Síndico           | Dashboard                      | `dashboard-sindico.html`           |
+| Síndico           | Config. de pagamento           | `config-pagamento-condominio.html` |
+| Síndico           | Relatórios financeiros         | `relatorios-financeiros.html`      |
+| Síndico           | Ocorrências                    | `ocorrencias.html`                 |
+| Síndico           | Eventos                        | `eventos-condominio.html`          |
+| Síndico           | Boletos do condomínio          | `boletos-sindico.html`             |
+| Gerente           | Cadastro de usuários           | `gerente-cadastro.html`            |
+| Gerente           | Solicitações (condôminos)      | `gerente-solicitacoes.html`        |
+| Gerente           | Relatórios financeiros         | `relatorios-financeiros.html`      |
+| Gerente           | Prestadores de serviço         | `prestadores-servico.html`         |
+| Gerente           | Solicitações avançadas         | `solicitacoes-gerente.html` ✅      |
+| Admin Global      | Dashboard                      | `dashboard-admin.html`             |
+| Admin Global      | Gerenciador de condomínios     | `condominios-gerenciador.html`     |
+| Admin Global      | Cadastro de condomínio         | `cadastro-condominio.html`         |
+| Admin Global      | Cadastro de apartamentos       | `cadastro-apartamentos.html`       |
+| Gerente/Admin     | Financeiro do condomínio       | `financeiro-condominio.html` ✅     |
+| Gerente/Admin     | Cadastro de fornecedores       | `cadastro-fornecedores.html` ✅     |
+| Gerente/Admin     | Visualização de fornecedores   | `fornecedores-visualizacao.html` ✅ |
 
 ---
 
-## 🛠️ Para reiniciar o projeto:
+## ✅ Últimos arquivos atualizados
+
+- `financeiro-condominio.html`
+- `cadastro-fornecedores.html`
+- `fornecedores-visualizacao.html`
+- `README.md`, `ROADMAP.md` e este `REINICIAR.md`
+
+---
+
+## 🛠️ Como retomar o projeto
 
 1. Abrir este `REINICIAR.md`
-2. Validar a última tela `meus-boletos.html`
-3. Retomar o fluxo pelo perfil gerente com `prestadores-servico.html`  
-   Ou continuar solicitando mockups ao Copilot seguindo o `ROADMAP.md`
+2. Localizar a última tela gerada: `fornecedores-visualizacao.html`
+3. Validar em Live Server local
+4. Solicitar a próxima tela ao Copilot ou seguir fluxo do `ROADMAP.md`
 
 ---
 
 📎 Repositório oficial:  
-[https://github.com/willianfruttero/condominium](https://github.com/willianfruttero/condominium)
+[github.com/willianfruttero/condominium](https://github.com/willianfruttero/condominium)

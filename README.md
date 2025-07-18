@@ -1,55 +1,111 @@
-# Projeto: Condominium
+# 🏢 Condominium — Painel Web Administrativo
 
-## Sobre o projeto
-
-Sistema web de gestão condominial com perfis de acesso diferenciados e funcionalidades específicas por usuário.
-
-## Execução
-
-Rodar localmente via servidor estático:
-```bash
-npm run dev
-Estrutura de pastas
-src/ → componentes, páginas, serviços
-
-public/mock-screens/ → imagens mockadas (.png) e arquivos HTML de referência visual (.html)
-
-Telas mockadas
-As seguintes telas foram criadas como mockups para ajudar no layout e estruturação visual do sistema. Cada imagem .png é acompanhada de um arquivo .html correspondente, permitindo que o assistente Copilot compreenda e colabore com base no layout das telas, já que não consegue visualizar imagens diretamente.
-
-Telas salvas em public/mock-screens/:
-login.png + login.html
-
-dashboard-admin.png + dashboard-admin.html
-
-cadastro-condominio.png + cadastro-condominio.html
-
-dashboard-sindico.png + dashboard-sindico.html
-
-cadastro-apartamentos.png + cadastro-apartamentos.html
-
-boletos-sindico.png + boletos-sindico.html
-
-boletos-condomino.png + boletos-condomino.html
-
-reservas-condomino-dia.png + reservas-condomino-dia.html
-
-perfil-condomino.png + perfil-condomino.html
-
-gerente-cadastro.png + gerente-cadastro.html
-
-gerente-solicitacoes.png + gerente-solicitacoes.html
-
-config-pagamento-condominio.png + config-pagamento-condominio.html
-
-condominios-gerenciador.png + condominios-gerenciador.html ← referência visual
-
-Estratégia de desenvolvimento
-O desenvolvimento seguirá com foco inicial nas interfaces front-end. Todas as telas serão mockadas em .html para servir como referência visual durante o processo. Posteriormente, será iniciado o desenvolvimento do back-end com Spring Boot, integrando cada interface aos dados reais e funcionalidades API.
-
-💡 Observação técnica: os arquivos .html são essenciais como referências visuais no lugar das imagens, permitindo que o Copilot compreenda os layouts e colabore durante o desenvolvimento mesmo sem acessar diretamente os arquivos de imagem.
-
+Sistema web visual para gestão de condomínios. Este projeto foca em reproduzir as interfaces por meio de **mockups HTML estáticos**, como referência visual para posterior desenvolvimento backend e integrações reais.
 
 ---
 
-Se quiser, posso já preparar o próximo mockup em HTML, ou te ajudar a montar uma estrutura base do Spring Boot para conectar tudo depois. Só chamar! 😄🚀
+## 👨‍💻 Como rodar localmente
+
+1. Clonar o repositório:
+```bash
+git clone https://github.com/willianfruttero/condominium.git
+Abrir o arquivo desejado na pasta:
+
+public/mock-screens/
+Usar Live Server (VSCode) para visualizar cada tela simulada
+
+🧱 Estrutura de pastas
+📦 condominium
+├── README.md
+├── ROADMAP.md
+├── REINICIAR.md
+└── public
+    └── mock-screens
+        ├── login.html
+        ├── meus-boletos.html
+        ├── prestadores-servico.html
+        ├── solicitacoes-gerente.html
+        ├── cadastro-fornecedores.html
+        ├── fornecedores-visualizacao.html
+        ├── financeiro-condominio.html
+        └── demais mockups...
+🔁 Fluxo visual com Copilot
+O projeto é desenvolvido junto ao Microsoft Copilot, por meio de:
+
+Geração de HTML estilizado para cada tela
+
+Teste visual via Live Server
+
+Versionamento de mockups em .html como base visual oficial
+
+Documentação que define funcionalidades, perfis e telas
+
+📎 Copilot não visualiza imagens .png, então os .html são usados como referência primária para validação visual.
+
+📋 Documentos internos
+ROADMAP.md → funcionalidades por perfil e telas mockadas
+
+REINICIAR.md → ponto de parada atual e fluxo colaborativo
+
+README.md → instruções técnicas e estrutura do projeto
+
+🧩 Telas mockadas concluídas
+👤 Condômino
+login.html
+
+perfil-condomino.html
+
+boletos-condomino.html
+
+reservas-condomino-dia.html
+
+eventos-condominio.html
+
+ocorrencias.html
+
+meus-boletos.html
+
+🧑‍💼 Síndico
+dashboard-sindico.html
+
+config-pagamento-condominio.html
+
+relatorios-financeiros.html
+
+boletos-sindico.html
+
+eventos-condominio.html
+
+ocorrencias.html
+
+👨‍🔧 Gerente
+gerente-cadastro.html
+
+gerente-solicitacoes.html
+
+relatorios-financeiros.html
+
+prestadores-servico.html
+
+solicitacoes-gerente.html
+
+👨‍💼 Admin Global
+dashboard-admin.html
+
+condominios-gerenciador.html
+
+cadastro-condominio.html
+
+cadastro-apartamentos.html
+
+🧰 Gerente / Admin
+financeiro-condominio.html
+
+cadastro-fornecedores.html
+
+fornecedores-visualizacao.html
+
+📍 Ponto atual
+Última tela mockada: fornecedores-visualizacao.html → lista com filtros, status e ações simuladas para fornecedores cadastrados.
+
+Próxima tela sugerida: agenda-servicos.html ou painel-manutencao.html

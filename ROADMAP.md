@@ -1,39 +1,65 @@
-# ROADMAP - Projeto Condominium
+# 🗺️ ROADMAP.md
 
-## Perfis de usuários
+## 👥 Perfis e funcionalidades
 
-- Síndico
-- Morador (condômino)
-- Administrador global
-- Gerente (admin condomínio específico)
+Este documento lista todas as funcionalidades previstas para cada tipo de usuário no sistema condominial, com link para os mockups HTML gerados.
 
-## Funcionalidades por perfil
+---
 
-- Condômino: boletos, reservas, perfil
-- Síndico: gestão de moradores, cobranças, comunicação interna
-- Gerente: cadastro, acompanhamento de solicitações
-- Admin global: painel consolidado de condomínios, cadastro de novos, gestão geral
+### 👤 Condômino
 
-## Metas futuras
+- [x] `login.html` — acesso ao sistema
+- [x] `perfil-condomino.html` — dados pessoais e apartamento
+- [x] `boletos-condomino.html` — painel de boletos pessoais
+- [x] `reservas-condomino-dia.html` — reservas de áreas comuns
+- [x] `eventos-condominio.html` — lista de eventos no condomínio
+- [x] `ocorrencias.html` — envio e acompanhamento de ocorrências
+- [x] `meus-boletos.html` — histórico de pagamentos
 
-- Módulo preditivo de inadimplência
-- Agendamento de ações
-- Integração com WhatsApp e notificações internas
-- Painel comparativo entre condomínios
-- Cadastro guiado de empreendimentos
-- Painel financeiro centralizado
+---
 
-## Telas mockadas futuras
+### 🧑‍💼 Síndico
 
-Todas as telas mockadas serão salvas em `public/mock-screens/` com seus respectivos arquivos `.png` e `.html`.  
-O arquivo `.html` de cada tela serve como **referência visual durante o desenvolvimento** e será utilizado pelo assistente Copilot para compreender o layout, já que ele não tem acesso direto às imagens.
+- [x] `dashboard-sindico.html` — visão geral do condomínio
+- [x] `config-pagamento-condominio.html` — configurações de cobrança
+- [x] `relatorios-financeiros.html` — geração de relatórios
+- [x] `ocorrencias.html` — gestão de ocorrências recebidas
+- [x] `eventos-condominio.html` — criação e edição de eventos
+- [x] `boletos-sindico.html` — controle de boletos do condomínio
 
-📎 Exemplo de estrutura:
-- `dashboard-admin.png` + `dashboard-admin.html`
-- `perfil-condomino.png` + `perfil-condomino.html`
-- `condominios-gerenciador.png` + `condominios-gerenciador.html`
+---
 
-## Estratégia de desenvolvimento
+### 👨‍🔧 Gerente
 
-O projeto será conduzido com foco inicial na implementação das interfaces front-end.  
-Cada tela será estruturada visualmente em `.html` antes do início da lógica funcional. Após finalização das interfaces, será iniciada a construção do back-end usando **Spring Boot**, com APIs integradas aos dados reais do sistema.
+- [x] `gerente-cadastro.html` — criação de usuários internos
+- [x] `gerente-solicitacoes.html` — solicitações enviadas pelos condôminos
+- [x] `relatorios-financeiros.html` — visão consolidada dos pagamentos
+- [x] `prestadores-servico.html` — controle básico de prestadores
+- [x] `solicitacoes-gerente.html` — tela avançada de encaminhamento
+
+---
+
+### 👨‍💼 Admin Global
+
+- [x] `dashboard-admin.html` — painel com métricas globais
+- [x] `condominios-gerenciador.html` — lista e controle de condomínios
+- [x] `cadastro-condominio.html` — criação de novos condomínios
+- [x] `cadastro-apartamentos.html` — registro de unidades residenciais
+
+---
+
+### 🧰 Gerente / Admin (novas telas)
+
+- [x] `financeiro-condominio.html` — painel de receita, despesa e lançamentos
+- [x] `cadastro-fornecedores.html` — formulário completo para registrar prestadores
+- [x] `fornecedores-visualizacao.html` — lista com filtros, status e ações
+
+---
+
+## 🔜 Telas futuras sugeridas
+
+- `agenda-servicos.html` — calendário de serviços prestados
+- `painel-manutencao.html` — acompanhamento de áreas comuns
+- `avaliacoes-fornecedores.html` — histórico de avaliações e notas
+- `acessos-portaria.html` — registro e controle de acessos
+- `notificacoes-gerais.html` — central de avisos e comunicados
