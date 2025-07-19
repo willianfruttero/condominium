@@ -8,10 +8,21 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
     body { background: #f2f4f8; padding: 20px; color: #333; }
-    h1 { font-size: 24px; margin-bottom: 25px; }
+
+    header {
+      display: flex; flex-direction: column; gap: 6px; margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 24px; font-weight: 600;
+    }
+
+    .perfil-logado {
+      font-size: 14px; color: #555; text-align: right;
+    }
 
     .filtros {
-      display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 25px;
+      display: flex; flex-wrap: wrap; gap: 15px; margin: 25px 0;
     }
 
     .filtros select, .filtros input {
@@ -47,7 +58,6 @@
 
     .btn-download { background: #2980b9; color: #fff; }
     .btn-visualizar { background: #bdc3c7; color: #333; }
-    .btn-enviar { background: #27ae60; color: #fff; }
 
     @media (max-width: 500px) {
       .filtros { flex-direction: column; }
@@ -56,7 +66,10 @@
   </style>
 </head>
 <body>
-  <h1>📁 Documentos do Condomínio</h1>
+  <header>
+    <h1>📁 Documentos do Condomínio</h1>
+    <div class="perfil-logado">Logado como <strong>João Mendes — Bloco B / Ap. 204</strong></div>
+  </header>
 
   <div class="filtros">
     <select>
