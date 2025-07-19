@@ -1,84 +1,69 @@
-# 🏢 Projeto: Condominium – Interface de Gestão Condominial
+# 🏢 Projeto: Condominium
 
-Este repositório contém os mockups visuais navegáveis do sistema de gestão condominial, desenvolvido com apoio do assistente Microsoft Copilot, por meio de uma abordagem visual, lógica e documentada.
-
----
-
-## 🤖 Dinâmica com Copilot
-
-A cada funcionalidade:
-
-1. Willian define o escopo desejado
-2. Copilot gera HTML completo, responsivo e contextualizado
-3. Layout validado localmente via Live Server
-4. Arquivo salvo em `public/mock-screens/`
-5. Lógica registrada em `ROADMAP.md`
-6. Ponto de retomada anotado em `REINICIAR.md`
-
-📎 Nada é salvo automaticamente → este README + os arquivos `.md` garantem que o projeto nunca se perca, mesmo após reiniciar o navegador.
+Interface de Gestão Condominial visual, responsiva e documentada — criada com apoio de Microsoft Copilot.
 
 ---
 
-## 🧰 Stack do Projeto
+## ⚙️ Stack
 
-### 🖥️ Frontend
-- **Next.js** (com `next/font`)
-- **TypeScript**
-- **Bootstrap 5** (mockups visuais)
-- **CSS Modules / PostCSS**
-- **ESLint + Prettier**
+**Frontend**
+- Next.js (com `next/font`)
+- TypeScript
+- Bootstrap 5
+- CSS Modules / PostCSS
+- ESLint + Prettier
 
-### ⚙️ Backend (fase posterior)
-- **Spring Boot**
-- **JWT + Spring Security**
-- **PostgreSQL + JPA/Hibernate**
-- **Swagger/OpenAPI**
+**Backend (planejado)**
+- Spring Boot + JWT
+- PostgreSQL + Hibernate
+- Swagger/OpenAPI
 
-### 🧪 Testes (planejados)
-- Jest + React Testing Library (frontend)
-- JUnit + MockMVC (backend)
+**Testes (futuros)**
+- Jest + React Testing Library
+- JUnit + MockMVC
 
-### 🚀 Deploy (planejado)
-- **Vercel** (frontend)
-- **Docker** (backend)
-- **GitHub Actions** (CI/CD)
-
----
-
-## 📚 Organização do Repositório
-
-- `README.md` → este arquivo: visão técnica e estrutura geral
-- `ROADMAP.md` → lógica funcional por tela e perfil
-- `REINICIAR.md` → ponto exato de retomada visual
-- `TECNOLOGIAS.md` → stack detalhada e atualizada
-- `public/mock-screens/` → tela em HTML navegável por tipo
+**Deploy**
+- Vercel (frontend)
+- Docker (backend)
+- GitHub Actions (CI/CD)
 
 ---
 
-## 👥 Perfis contemplados
+## 📚 Documentação
 
-- Condômino  
-- Síndico  
-- Gerente  
-- Admin Global  
+| Documento       | Descrição                          |
+|----------------|-------------------------------------|
+| README.md       | Visão geral e stack                 |
+| ROADMAP.md      | Lógica por tela, versão e perfil    |
+| REINICIAR.md    | Ponto de retomada do projeto        |
+| TECNOLOGIAS.md  | Stack técnica detalhada             |
+
+---
+
+## 👤 Perfis
+
+- Condômino
+- Síndico
 - Gerente/Admin
 
-Cada tela respeita permissões e conteúdo adaptado por tipo de usuário logado.
+Cada tela respeita conteúdo adaptado por tipo de usuário logado.
 
 ---
 
-## 🔔 Exemplo de tela: `notificacoes-sistema.html`
+## 💡 Dinâmica com Copilot
 
-- Filtros por status, tipo, categoria, prioridade, bloco, apto, perfil e período
-- Cards com ações: contestar multa, visualizar evidência, editar evento, reenviar boleto
-- Conteúdo e visibilidade adaptados por perfil
-- Documentação registrada em `ROADMAP.md`
-- Integração futura com backend em Spring Boot
+1. Willian define escopo
+2. Copilot gera o HTML completo e responsivo
+3. Teste local via Live Server
+4. Tela salva em `public/mock-screens/`
+5. Documentação registrada nos `.md`
 
 ---
 
-## 🚀 Como contribuir ou continuar
+## 📌 Exemplo de tela recente
 
-- Consulte `REINICIAR.md` para saber exatamente onde paramos
-- Verifique regras e lógica no `ROADMAP.md`
-- Utilize mockups em `public/mock-screens/` para validar funcionalidades
+**painel-financeiro.html**
+- Cards resumo: receita, despesa, saldo
+- Gráfico de barras (Chart.js)
+- Filtros por período e por data customizada
+- Integração futura com Spring Boot e KPIs avançados
